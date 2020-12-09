@@ -91,13 +91,14 @@ SELECT
 
 Cliente.cliente_nombre as nombre,
 Medidor.codigo_medidor as Medidor,
-Medidor_inspector_Agua.fecha_registro_lectura as fecha_registrada_de_lectura
+Medidor_inspector_Agua.fecha_registro_lectura as fecha_registrada_de_lectura,
 Plantilla.milimetros as lectura_actual
 
 from  Cliente Inner join Medidor on medidor_codigo_cliente= Cliente.cliente_codigo
 inner join  Plantilla ON plantilla_codigo_medidor= Medidor.codigo_medidor
-inner join Medidor_inspector_Agua on med_inspector_codigo_medidor =  
+inner join Medidor_inspector_Agua on med_inspector_codigo_medidor =  Medidor.codigo_medidor
 order by  nombre desc
+
 
 
 
