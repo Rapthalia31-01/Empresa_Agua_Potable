@@ -1,4 +1,4 @@
-reate table Cliente(
+create table Cliente(
 	cliente_codigo varchar(10) primary key not null,
 	cliente_nombre varchar(10) not null,
 	cliente_apellido varchar(10) not null,
